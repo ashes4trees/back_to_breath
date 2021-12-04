@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
-
   "browserslist": [
     "defaults"
   ],
@@ -25,6 +23,7 @@
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.44.0",
     "sass-loader": "^12.3.0",
+    "three": "^0.135.0",
     "webpack": "^5.64.4",
     "webpack-cli": "^4.9.1"
   }

@@ -1,4 +1,66 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+body {
+  font-family: "Comfortaa";
+  background-image: url("../assets/green_cup.png");
+  margin: 50px;
+}
 
+h1 {
+  display: flex;
+  width: auto;
+  justify-content: center;
+}
+
+.image-music-container {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+#image-canvas {
+  border: 1px solid red;
+}
+
+.music-controls i {
+  background: #18633b;
+}
+
+.music-controls {
+  /* border: 1px solid black; */
+  width: 20%;
+}
+
+.music-controls ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #18633b;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 5%;
+  box-shadow: 0px 8px 15px #4e4d4d;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(85%);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.empty {
+  width: 20%;
+  /* border: 1px solid red; */
+}

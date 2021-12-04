@@ -4,13 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/main.css">
-    <script src="./dist/main.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0134b9df1d.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <script src="../node_modules/three/src/Three.js"></script>
+    <script> src="../node_modules/three/examples/js/controls/TrackballControls.js"</script>
     <title>Back to Breath</title>
 </head>
 <body>
+    <h1>Back to Breath</h1>
 
-    <div></div>
+    <audio id="audio" src="" loop></audio>
     
+    <div class="image-music-container">
+        
+        <div class="empty">
+            <span></span>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="image-canvas" width="900" height="506"></canvas>
+        </div>
+    
+        <div class="music-controls">
+            <ul>
+                <li class="button"><i class="fas fa-music"></i></li>
+                <li class="button"><i class="fas fa-pause"></i></li>
+                <li class="button"><i class="fas fa-play"></i></li>
+                <li class="button"><i class="fas fa-volume-up"></i></li>
+            </ul>
+        </div>
+
+    </div>
 </body>
 </html>
