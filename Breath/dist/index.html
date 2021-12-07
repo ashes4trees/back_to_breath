@@ -9,36 +9,77 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Roboto:wght@400;700&display=swap"
     rel="stylesheet">
+    <script src='http://joeiddon.github.io/perlin/perlin.js'></script>
     <script src="https://kit.fontawesome.com/0134b9df1d.js" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
     <script src="../node_modules/three/src/Three.js"></script>
-    <script> src="../node_modules/three/examples/js/controls/TrackballControls.js"</script>
     <title>Back to Breath</title>
 </head>
 <body>
-    <h1>Back to Breath</h1>
+    <div id="splash">
+        <h1>Back to Breath</h1>
+        
+        <audio id="audio" src="" loop></audio>
+        
+        
+        
+        <form id="form" >
+            <label for="music">choose your music:</label>
+            <br>
+            <br>
 
-    <audio id="audio" src="" loop></audio>
-    
-    <div class="image-music-container">
+            <select name="music" id="select-music">
+                <option value="0">piano</option>
+                <option value="1">ambient</option>
+                <option value="2">nature</option>
+            </select>
+            <br>
+            <br>
         
-        <div class="empty">
-            <span></span>
-        </div>
+            <label for="time">choose duration:</label>
+            <br>
+            <br>
+            <select name="time" id="select-duration">
+                <option value="1">1 minute</option>
+                <option value="3">3 minutes</option>
+                <option value="5">5 minutes</option>
+            </select>
+            <br>
+            <br>
         
-        <div class="canvas-container">
-            <canvas id="image-canvas" width="900" height="506"></canvas>
+            <input id="submit" type="submit" value="submit">
+        
+        </form>
+
+        <div id="instructions">
+            <p>move: wasd</p>
+            <br>
+            <p>look: mouse</p>
+            <br>
+            <p>pause controls: space</p>
+            <br>
+            <input id="begin" type="submit" value="begin">
         </div>
-    
-        <div class="music-controls">
-            <ul>
-                <li class="button"><i class="fas fa-music"></i></li>
-                <li class="button"><i class="fas fa-pause"></i></li>
-                <li class="button"><i class="fas fa-play"></i></li>
-                <li class="button"><i class="fas fa-volume-up"></i></li>
-            </ul>
-        </div>
+
 
     </div>
+    
+    
+        
+        <div class="canvas-container">
+            <canvas id="canvas1" ></canvas>
+        </div>
+
+        <div class="canvas2-container">
+            <canvas id="canvas2"></canvas>
+        </div>
+    
+        <div class="music-control">
+                <!-- <li class="button"><i class="fas fa-music"></i></li> -->
+                <i id="play-pause" class="fas fa-pause" ></i>
+                <!-- <li id="play" class="button"><i id=class="fas fa-play"></i></li> -->
+                <!-- <li class="button"><i class="fas fa-volume-up"></i></li> -->
+        </div>
+
 </body>
 </html>

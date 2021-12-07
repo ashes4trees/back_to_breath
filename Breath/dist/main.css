@@ -3,45 +3,74 @@
   \*************************************************************************************************************************************/
 body {
   font-family: "Comfortaa";
-  background-image: url("../assets/green_cup.png");
-  margin: 50px;
+  background-image: url("./assets/green_cup.png");
+  margin: 0;
 }
 
-h1 {
+#splash {
+  margin: auto;
   display: flex;
-  width: auto;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
 }
 
-.image-music-container {
+#instructions {
+  display: none;
+  flex-direction: column;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40%;
+}
+
+#form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40%;
+}
+
+#form select {
   border: 1px solid black;
+  border-radius: 4px;
+  background: none;
+  font-weight: bold;
 }
 
-#image-canvas {
-  border: 1px solid red;
+
+
+.music-control {
+  /* display: 'none'; */
+  position: absolute;
+  top: 3%;
+  left: 3%;
 }
 
-.music-controls i {
-  background: #18633b;
+.canvas2-container {
+  position: absolute;
+  width: 50px;
+  height: 300px;
+  top: 30%;
+  left: 3%;
+  border: 2px solid #18633b;
+  border-radius: 20px;
+  background-color: rgb(172,175,156, 0.5);
 }
 
-.music-controls {
-  /* border: 1px solid black; */
-  width: 20%;
-}
-
-.music-controls ul {
+/* .music-controls ul {
   list-style: none;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-}
+} */
 
-.button {
-  display: flex;
+#play-pause {
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: #18633b;
@@ -52,15 +81,23 @@ h1 {
   cursor: pointer;
 }
 
-.button:hover {
+#submit, #begin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #18633b;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 8px 15px #4e4d4d;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#play-pause:hover, #submit:hover {
   filter: brightness(85%);
 }
 
-.button:active {
-  transform: scale(0.95);
+#play-pause:active, #submit:active {
+  transform: scale(0.90);
 }
 
-.empty {
-  width: 20%;
-  /* border: 1px solid red; */
-}
