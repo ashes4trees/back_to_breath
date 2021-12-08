@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import View from './scripts/view.js';
 import { FirstPersonControls } from "three/examples/jsm/controls/FirstPersonControls";
 import Music from './scripts/music';
+import Breath from './scripts/breath';
 
 
 
@@ -11,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.querySelector("#canvas1");
     const submit = document.querySelector("#submit");
     const begin = document.querySelector('#begin');
+    const canvas2 = document.querySelector('#canvas2');
+    canvas2.width = 50;
+    canvas2.height = 300;
+    const ctx = canvas2.getContext('2d');
 
     submit.addEventListener('click', e => {
         e.preventDefault();
@@ -19,8 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const music = document.querySelector('#select-music').value;
         const duration = document.querySelector('#select-duration').value;
         const audio = new Music(music, duration);
-        audio.fadeOut();
+         
+        
+        
         document.querySelector('#play-pause').style.display = 'flex';
+        document.querySelector('.canvas2-container').style.display = 'flex';
+        
+        const breath = new Breath(ctx);
         document.querySelector("#instructions").style.display = 'flex';
         });
     
@@ -28,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     begin.addEventListener('click', e => {
         e.preventDefault();
         document.querySelector('#instructions').style.display = 'none';
-        // document.querySelector('#splash').style.display = 'none;'
         document.querySelector("h1").style.display = 'none';
         const view = new View();
         console.log(view.scene.children);

@@ -38,15 +38,15 @@ class Music {
 
     fadeOut() {
         const audio = this.audio;
-        setTimeout(() => {
-            if (!audio.paused && audio.volume !== 0) {
-                let fade = (audio.volume/10)
-               setInterval( () => {
-                   audio.volume - fade
-               }, 200); 
-            }
-        }, (this.duration * 60 * 1000) - (10 * 1000)) 
+        const fade = (audio.volume)/10;
+        while (audio.volume > 0) {
+            setInterval( () => {
+                audio.volume - fade
+            }, 1000);
+        }
+        audio.pause();
     }
+
 }
 
 export default Music;

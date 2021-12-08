@@ -51,6 +51,7 @@ body {
 }
 
 .canvas2-container {
+  display: none;
   position: absolute;
   width: 50px;
   height: 300px;
