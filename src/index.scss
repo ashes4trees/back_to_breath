@@ -25,6 +25,9 @@ h1 {
   align-items: center;
   justify-content: space-evenly;
   width: 30%;
+  // border: 1px solid black;
+  // box-shadow: 0px 8px 15px #4e4d4d;
+
 }
 
 #instructions {
@@ -96,7 +99,7 @@ h1 {
   justify-content: space-evenly;
 } */
 
-#play-pause, #git {
+#play-pause, #git, #linkedin {
   display: none;
   justify-content: center;
   align-items: center;
@@ -107,8 +110,6 @@ h1 {
   box-shadow: 0px 8px 15px #4e4d4d;
   cursor: pointer;
 }
-
-
 
 #submit, #begin {
   display: flex;
