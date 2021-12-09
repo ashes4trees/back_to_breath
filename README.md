@@ -1,3 +1,4 @@
+
 # Back to Breath
 
 ## Background
@@ -25,13 +26,12 @@ Nav links will include links to my LinkedIn, GitHub, and portfolio.
 
 
 ## Technologies, Libraries, APIs
-This project will be created with:
+This project was created with:
 
 * Canvas API to render the image
 * Three.js to responsively animate image elements
 * Webpack to bundle script files 
 * npm to manage dependencies
-* SoundCloud to embed music
 
 ## Implementation Timeline
 Friday Afternoon & Weekend:
