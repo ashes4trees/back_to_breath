@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         
         const view = new View();
-        console.log(view.scene.children);
         document.querySelector('#load').style.display = 'flex';
 
         setTimeout(() => {
