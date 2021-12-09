@@ -99,8 +99,8 @@ class View {
         const fogColor = new THREE.Color(0xF2B295);
         this.scene.fog = new THREE.Fog(fogColor, 50, 1000);
 
-        const axes = new THREE.AxesHelper(100);
-        this.scene.add(axes);
+        // const axes = new THREE.AxesHelper(100);
+        // this.scene.add(axes);
 
         const container = document.querySelector('.canvas-container');
         container.appendChild(this.renderer.domElement);
@@ -147,36 +147,6 @@ class View {
         }
     }
 
-    // addLeaf() {
-    //     const x = (Math.random() * 5000) - 2500;
-    //     const y = Math.random() * (200 - 0);
-    //     const z = (Math.random() * 5000) - 2500;
-
-    //     const shape = new THREE.CircleBufferGeometry(5, 1, 0, 120);
-    //     const texture = new THREE.TextureLoader().load('assets/leaf.jpg');
-    //     const mat = new THREE.MeshStandardMaterial({ map: texture });
-    //     const leaf = new THREE.Mesh(shape, mat);
-    //     leaf.position.set(x, y, z);
-    //     this.scene.add(leaf);
-    //     return leaf;
-    // }
-
-    
-    // addApples() {
-        //     const kids = this.scene.children;
-        //     const scene = this.scene;
-        //     const trees = kids.filter(obj => obj.name === 'tree1');
-        //     debugger
-        //     trees.forEach((tree) => {
-            //         const sphere = new THREE.SphereBufferGeometry(20, 132, 132);
-            //         const color = new THREE.Color('red');
-            //         const mat = new THREE.MeshPhongMaterial({color: color, shininess: 50, reflectivity: 0.6});
-            //         const apple = new THREE.Mesh(sphere, mat);
-            //         scene.add(apple);
-            //         apple.name = 'apple';
-            //         apple.position.set(tree.position.x, 100, tree.position.z);
-            //     })
-            // }
             
             
         addSky() {
@@ -214,14 +184,12 @@ class View {
             uniforms['sunPosition'].value.copy(sun);
             
             renderer.toneMappingExposure = effects.exposure;
-            // renderer.render(scene, camera);
             
             
         }
         
         animate() {
             this.leaf.translateY(leafClock.getDelta() * 10);
-            // this.leaf.translateX(leafClock.getDelta() * 30);
             this.leaf.rotateY(.25);
             this.controls.update(controlsClock.getDelta());
             requestAnimationFrame(this.animate.bind(this)); 
