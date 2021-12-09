@@ -8,7 +8,7 @@ class Apple {
         // this.num = num;
         const loader = new GLTFLoader();
 
-        loader.load(`assets/misc/apple.glb`, function (gltf) {
+        loader.load(`./src/assets/misc/apple.glb`, function (gltf) {
             let apple = gltf.scene;
             apple.name = apple;
             apple.scale.set(15, 15, 15);

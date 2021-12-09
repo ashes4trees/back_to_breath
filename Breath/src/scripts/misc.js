@@ -11,7 +11,7 @@ class Misc {
         const randomPosZ = (Math.random() * 5000) - 2500;
         const num = Math.floor(Math.random() * (4 - 1) + 1);
 
-        loader.load(`assets/misc/misc1.glb`, function (gltf) {
+        loader.load(`./src/assets/misc/misc1.glb`, function (gltf) {
             let misc = gltf.scene;
             misc.name = `misc1`;
             misc.scale.set(15, 15, 15);

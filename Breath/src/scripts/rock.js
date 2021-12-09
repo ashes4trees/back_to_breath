@@ -11,7 +11,7 @@ class Rock {
         const randomPosZ = (Math.random() * 5000) - 2500;
         const num = Math.floor(Math.random() * (4 - 1) + 1);
 
-        loader.load(`assets/rocks/rock${num}.glb`, function (gltf) {
+        loader.load(`./src/assets/rocks/rock${num}.glb`, function (gltf) {
             let rock = gltf.scene;
             rock.name = `rock${num}`;
             rock.scale.set(15, 15, 15);

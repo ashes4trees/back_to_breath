@@ -9,7 +9,7 @@ class Leaf {
         const z = (Math.random() * 5000) - 2500;
 
         const shape = new THREE.CircleBufferGeometry(5, 1, 0, 120);
-        const texture = new THREE.TextureLoader().load('assets/leaf.jpg');
+        const texture = new THREE.TextureLoader().load('./src/assets/leaf.jpg');
         const mat = new THREE.MeshStandardMaterial({map: texture});
         const leaf = new THREE.Mesh(shape, mat);
         leaf.position.set(x, y, z);

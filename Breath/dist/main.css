@@ -3,7 +3,7 @@
   \*************************************************************************************************************************************/
 body {
   font-family: "Comfortaa";
-  background-image: url("./assets/green_cup.png");
+  background-image: url("../src/assets/green_cup.png");
   margin: 0;
 }
 

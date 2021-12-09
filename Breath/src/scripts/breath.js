@@ -1,8 +1,4 @@
-// const canvas2 = document.querySelector('#canvas2');
-// canvas2.width = 50;
-// canvas2.height = 300;
-// const ctx = canvas2.getContext('2d');
-    
+
 
 class Breath {
 

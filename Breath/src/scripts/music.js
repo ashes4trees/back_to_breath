@@ -1,7 +1,7 @@
 const options = [
-    { number: 0, file_name: './assets/music/piano-moment-9835.mp3'},
-    { number: 1, file_name: './assets/music/chill-ambient-11322.mp3'},
-    { number: 2, file_name: './assets/music/forest-with-small-river-birds-and-nature-field-recording-6735.mp3'}
+    { number: 0, file_name: './src/assets/music/piano-moment-9835.mp3'},
+    { number: 1, file_name: './src/assets/music/chill-ambient-11322.mp3'},
+    { number: 2, file_name: './src/assets/music/forest-with-small-river-birds-and-nature-field-recording-6735.mp3'}
 ]
 
 
@@ -34,22 +34,6 @@ class Music {
             } 
         }
         )
-    }
-
-    fadeOut() {
-        const audio = this.audio;
-        debugger
-        if (!audio.paused) {
-            const fade = (audio.volume) / 10;
-            debugger
-            while (audio.volume > 0) {
-                setInterval(() => {
-                    debugger
-                    audio.volume - fade
-                }, 1000);
-            }
-            audio.pause();
-        } 
     }
 
 }

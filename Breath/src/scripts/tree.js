@@ -20,7 +20,7 @@ class Tree {
         const randomPosZ = (Math.random() * 5000) - 2500;
         const num = Math.floor(Math.random() * (4 - 1) + 1);
         
-        loader.load(`assets/trees/tree${num}.glb`, function (gltf) {
+        loader.load(`./src/assets/trees/tree${num}.glb`, function (gltf) {
             let tree = gltf.scene;
             tree.name = `tree${num}`;
             tree.scale.set(30, 30, 30);
