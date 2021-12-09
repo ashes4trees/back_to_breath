@@ -7,6 +7,8 @@ import Breath from './scripts/breath';
 
 
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     
     const canvas = document.querySelector("#canvas1");
@@ -25,8 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const duration = document.querySelector('#select-duration').value;
         const audio = new Music(music, duration);
          
-        
-        
         document.querySelector('#play-pause').style.display = 'flex';
         document.querySelector('.canvas2-container').style.display = 'flex';
         
@@ -34,16 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector("#instructions").style.display = 'flex';
         });
     
+    
 
     begin.addEventListener('click', e => {
         e.preventDefault();
         document.querySelector('#instructions').style.display = 'none';
         document.querySelector("h1").style.display = 'none';
+        // document.querySelector('#load').style.display = 'flex';
+
         const view = new View();
         console.log(view.scene.children);
+        // document.querySelector('#load').style.display = 'none';
         view.animate();
         
-
         window.addEventListener('resize', function () {
             let width = window.innerWidth;
             let height = window.innerHeight;

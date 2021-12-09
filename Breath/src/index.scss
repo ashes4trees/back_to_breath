@@ -1,67 +1,111 @@
 body {
-    font-family: 'Comfortaa'; 
-    background-image: url('../assets/green_cup.png');
-    margin: 50px;
-  }
-
-h1 {
-    display: flex;
-    width: auto;
-    justify-content: center;
+  font-family: "Comfortaa";
+  background-image: url("./assets/green_cup.png");
+  margin: 0;
 }
 
-  .image-music-container {
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
-   
-  }
+#splash {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+}
 
-  #image-canvas {
-      border: 1px solid red;
-  }
+#instructions {
+  display: none;
+  flex-direction: column;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40%;
+  text-align: center;
+}
 
-  .music-controls i {
-    background: #18633b;
-  }
+#form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40%;
+}
 
-  .music-controls {
-    /* border: 1px solid black; */
-    width: 20%;
-  }
+#load {
+  display: none;
+  flex-direction: column;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40%;
+  text-align: center;
+}
 
-  .music-controls ul {
-    list-style: none;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
+#form select {
+  border: 1px solid black;
+  border-radius: 4px;
+  background: none;
+  font-weight: bold;
+}
 
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #18633b;
-    width: 50px;
-    height: 50px;
-    border-radius: 50% 5%;
-    box-shadow: 0px 8px 15px rgb(78, 77, 77);
-    cursor: pointer;
-  }
 
-  .button:hover {
-    filter: brightness(85%);
-  }
 
-  .button:active {
-    transform: scale(0.95);
-  }
+.music-control {
+  /* display: 'none'; */
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
 
-  .empty {
-    width: 20%;
-    /* border: 1px solid red; */
-  }
- 
- 
+.canvas2-container {
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 300px;
+  top: 30%;
+  left: 3%;
+  border: 2px solid #18633b;
+  border-radius: 20px;
+  background-color: rgb(172,175,156, 0.5);
+}
 
+/* .music-controls ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+} */
+
+#play-pause {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #18633b;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 5%;
+  box-shadow: 0px 8px 15px #4e4d4d;
+  cursor: pointer;
+}
+
+#submit, #begin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #18633b;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 8px 15px #4e4d4d;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#play-pause:hover, #submit:hover {
+  filter: brightness(85%);
+}
+
+#play-pause:active, #submit:active {
+  transform: scale(0.90);
+}
