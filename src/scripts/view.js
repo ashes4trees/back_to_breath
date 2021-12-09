@@ -13,25 +13,22 @@ import { DirectionalLight } from 'three';
 
 
 const leafClock = new THREE.Clock();
-// const leafVector = new THREE.Vector3(10, 5, 10)
 const controlsClock = new THREE.Clock();
 
 class View {
     constructor() {
         this.scene = new THREE.Scene();
-        // this.scene.backgwround = new THREE.Color(0x6FA8DC);
         this.camera = new THREE.PerspectiveCamera(55, window.innerWidth/window.innerHeight, 0.01, 1000);
         this.camera.position.set(0, 100, 0);
 
         const canvas = document.querySelector('#canvas1');
         this.renderer = new THREE.WebGLRenderer({ canvas, alpha: true});
         this.renderer.setSize(window.innerWidth, window.innerHeight);
-        
         this.renderer.physicallyCorrectLights = true;
-        // this.renderer.setClearColor(0x6FA8DC, .85);
 
-        
+        // add controls
         this.controls = new FirstPersonControls(this.camera, this.renderer.domElement);
+        this.controls.enabled = false;
         window.addEventListener('keyup', (e) => {
             if (e.code === 'Space') {
                 if (this.controls.enabled === true) {
