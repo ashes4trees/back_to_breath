@@ -59,12 +59,16 @@ body {
   font-weight: bold;
 }
 
-
-
 .music-control {
   /* display: 'none'; */
   position: absolute;
   top: 3%;
+  left: 3%;
+}
+
+.links {
+  position: absolute;
+  bottom: 25%;
   left: 3%;
 }
 
@@ -73,7 +77,7 @@ body {
   position: absolute;
   width: 50px;
   height: 300px;
-  top: 30%;
+  top: 20%;
   left: 3%;
   border: 2px solid #18633b;
   border-radius: 20px;
@@ -88,7 +92,7 @@ body {
   justify-content: space-evenly;
 } */
 
-#play-pause {
+#play-pause, #git {
   display: none;
   justify-content: center;
   align-items: center;
@@ -99,6 +103,7 @@ body {
   box-shadow: 0px 8px 15px #4e4d4d;
   cursor: pointer;
 }
+
 
 #submit, #begin {
   display: flex;
@@ -112,10 +117,10 @@ body {
   font-weight: bold;
 }
 
-#play-pause:hover, #submit:hover {
+#play-pause:hover, #submit:hover, #git:hover {
   filter: brightness(85%);
 }
 
-#play-pause:active, #submit:active {
+#play-pause:active, #submit:active, #git:active {
   transform: scale(0.90);
 }

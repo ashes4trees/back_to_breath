@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
          
         document.querySelector('#play-pause').style.display = 'flex';
+        document.querySelector('#git').style.display = 'flex';
         document.querySelector('.canvas2-container').style.display = 'flex';
         
         const breath = new Breath(ctx);
