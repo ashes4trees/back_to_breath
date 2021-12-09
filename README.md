@@ -1,18 +1,19 @@
+
 # Back to Breath
 
 ## Background
 For those of us who spend a lot of time at our desks, finding brief moments of calm throughout the day are crucial. This project aims to provide a digital destressing space for users, with a scenic landscape including whimsical animations, meditative music, and visual prompts to help slow breathing. 
 
 ## Functionality & MVPs
-* In Back to Breath, users will be able to:
+* In Back to Breath, users can:
 * Select their preferred music 
 * Select a length of time for their “meditation”
 * Match their breathing to a repetitive visual cue
-* Click on items within the canvas to trigger animations
-* Change, pause, play the music and adjust volume
+* Navigate through a scenic 3D landscape using keys and mouse
 
-In addition, this project will include:
-* A production README
+In addition, the project includes:
+* Links to my professional networking profiles
+* A production READMe
 
 ## Wireframes
 
@@ -25,13 +26,12 @@ Nav links will include links to my LinkedIn, GitHub, and portfolio.
 
 
 ## Technologies, Libraries, APIs
-This project will be created with:
+This project was created with:
 
 * Canvas API to render the image
 * Three.js to responsively animate image elements
 * Webpack to bundle script files 
 * npm to manage dependencies
-* SoundCloud to embed music
 
 ## Implementation Timeline
 Friday Afternoon & Weekend:
