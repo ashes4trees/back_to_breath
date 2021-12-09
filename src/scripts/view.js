@@ -181,8 +181,8 @@ class View {
         animate() {
             this.leaf.translateY(leafClock.getDelta() * 10);
             this.leaf.rotateY(.25);
-            this.controls.update(controlsClock.getDelta());
             requestAnimationFrame(this.animate.bind(this)); 
+            this.controls.update(controlsClock.getDelta());
             this.renderer.render(this.scene, this.camera);
         }
 
