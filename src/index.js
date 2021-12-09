@@ -4,10 +4,6 @@ import View from './scripts/view.js';
 import Music from './scripts/music';
 import Breath from './scripts/breath';
 
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     
     const canvas = document.querySelector("#canvas1");
