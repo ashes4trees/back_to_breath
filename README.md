@@ -21,6 +21,9 @@ In addition, the project includes:
 
 ## Images
 
+![instructions](src/assets/instructions.png)
+![first animation](src/assets/animate.png)
+
 
 ## Pre-Production Wireframes
 
