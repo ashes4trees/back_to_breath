@@ -1,7 +1,7 @@
 
 ![Back to Breath](src/assets/logo.png)
 
-## [Try it Here](https://github.io/JS_Project)
+## [Try it Here](https://ashes4trees.github.io/JS_Project/)
 
 ## Background
 
