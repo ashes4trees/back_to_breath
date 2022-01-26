@@ -1,7 +1,7 @@
 
 ![Back to Breath](src/assets/logo.png)
 
-## [Try it Here](https://github.com/ashes4trees/JS_Project)
+## [Try it Here](https://ashes4trees.github.io/JS_Project/)
 
 ## Background
 
@@ -20,6 +20,9 @@ In addition, the project includes:
 * A production READMe
 
 ## Images
+
+![instructions](src/assets/instructions.png)
+![first animation](src/assets/animate.png)
 
 
 ## Pre-Production Wireframes
