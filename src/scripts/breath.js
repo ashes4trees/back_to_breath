@@ -28,14 +28,14 @@ class Breath {
         if (this.pos[1] - this.radius < 0) {
             this.vel = -this.vel;
             prompt.innerHTML = 'out...';
-            prompt.style.left = '3.5%';
-            prompt.style.fontSize = '18px';
+            // prompt.style.left = '3.5%';
+            // prompt.style.fontSize = '18px';
         }
         if (this.pos[1] + this.radius > this.height ) {
             this.vel = -this.vel
             prompt.innerHTML = '  in...'
-            prompt.style.left = '4%';
-            prompt.style.fontSize = '20px';
+            // prompt.style.left = '4%';
+            // prompt.style.fontSize = '20px';
         }
             this.pos[1] -= this.vel;
     }
