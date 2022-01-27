@@ -40,7 +40,7 @@ class View {
        
         const geometry = new THREE.PlaneBufferGeometry(5000, 5000, 100, 100);
        
-        const texture = new THREE.TextureLoader().load('./src/assets/grass_path.jpg');
+        const texture = new THREE.TextureLoader().load('../src/assets/grass_path.jpg');
         texture.wrapS = THREE.RepeatWrapping;
         texture.wrapT = THREE.RepeatWrapping;
         texture.repeat.set(32, 32);
