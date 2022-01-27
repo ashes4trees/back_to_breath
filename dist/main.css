@@ -1,3 +1,173 @@
-body{font-family:"Comfortaa";background-image:url("../src/assets/green_cup.png");margin:0}.fade-in{animation:fadeIn ease 10s}@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}h1{margin-top:40%}#splash{margin:auto;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;width:30%}#instructions{display:none;flex-direction:column;width:fit-content;margin-left:auto;margin-right:auto;margin-top:10%;text-align:center}#form{display:flex;flex-direction:column;width:fit-content;margin-left:auto;margin-right:auto;margin-top:10%}#load{display:none;flex-direction:column;width:fit-content;margin-left:auto;margin-right:auto;margin-top:60%;text-align:center}#form select{border:1px solid #000;border-radius:4px;background:none;font-weight:bold}.music-control{position:absolute;top:3%;left:3%}.links{position:absolute;bottom:30%;left:3%}.canvas2-container{display:none;position:absolute;width:50px;height:300px;top:20%;left:3%;border:2px solid #18633b;border-radius:20px;background-color:rgba(172,175,156,.5)}#play-pause,#git,#linkedin{display:none;justify-content:center;align-items:center;background-color:#18633b;width:50px;height:50px;border-radius:50% 5%;box-shadow:0px 8px 15px #4e4d4d;cursor:pointer}#submit,#begin{display:flex;justify-content:center;align-items:center;background-color:#18633b;border:none;border-radius:4px;box-shadow:0px 8px 15px #4e4d4d;cursor:pointer;font-weight:bold}#play-pause:hover,#submit:hover,#git:hover{filter:brightness(85%)}#play-pause:active,#submit:active,#git:active{transform:scale(0.9)}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+body {
+  font-family: "Comfortaa";
+  background-image: url("../src/assets/green_cup.png");
+  margin: 0;
+  overflow-y: hidden;
+}
 
-/*# sourceMappingURL=main.css.map*/
+.fade-in {
+  animation: fadeIn ease 10s;
+}
+
+.fade-out {
+  visibility: hidden;
+  animation: fadeOut ease 10s;
+}
+
+@keyframes fadeIn {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+h1 {
+  margin-top: 40%;
+}
+
+#splash {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+}
+
+#instructions, #modal, #form, #load, #goodbye {
+  display: none;
+  flex-direction: column;
+  width: fit-content;
+  position: absolute;
+  top: 30vh;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0px 8px 15px #4e4d4d;
+  text-align: center;
+}
+
+#form {
+  display: flex;
+}
+
+#form select {
+  border: 1px solid black;
+  border-radius: 4px;
+  background: none;
+  font-weight: bold;
+  outline: none;
+}
+
+.music-control {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+}
+
+.links {
+  position: absolute;
+  height: 200px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  top: 5%;
+  right: 3%;
+}
+
+.misc {
+  position: absolute;
+  bottom: 22%;
+  left: 3%;
+}
+
+.canvas2-container {
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 300px;
+  top: 20%;
+  left: 3%;
+  border: 2px solid #18633b;
+  border-radius: 20px;
+  background-color: rgba(172, 175, 156, 0.5);
+}
+
+#prompt {
+  width: fit-content;
+  font-size: 20px;
+  display: none;
+  color: black;
+  font-weight: bolder;
+  position: absolute;
+  top: 35%;
+  left: 4%;
+  text-align: left;
+}
+
+#play-pause, #git, #linkedin, #info-btn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #18633b;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 5%;
+  box-shadow: 0px 8px 15px #4e4d4d;
+  cursor: pointer;
+}
+
+#git, #linkedin {
+  display: flex;
+}
+
+#git-logo, #linkedin-logo {
+  width: 25px;
+  height: auto;
+}
+
+#info-btn {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#submit, #begin, #close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #18633b;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 3px 8px #4e4d4d;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#play-pause:hover, #submit:hover, #info-btn:hover,
+#linkedin:hover, #git:hover,
+#begin:hover, #close:hover {
+  filter: brightness(85%);
+}
+
+#play-pause:active, #submit:active,
+#linkedin:active, #git:active,
+#info-btn:active, #begin:active, #close:active {
+  transform: scale(0.9);
+}

@@ -1,13 +1,10 @@
 import * as THREE from 'three';
 import { FirstPersonControls } from "three/examples/jsm/controls/FirstPersonControls";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-// import { TextureLoader } from 'three';
 import { Sky } from 'three/examples/jsm/objects/Sky'; 
-// import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min.js';
 import Tree from './tree';
 import Rock from './rock';
 import { Mesh } from 'three';
-// import Misc from './misc';
 import Leaf from './leaf';
 import { DirectionalLight } from 'three';
 
@@ -26,7 +23,6 @@ class View {
         this.renderer.setSize(window.innerWidth, window.innerHeight);
         this.renderer.physicallyCorrectLights = true;
 
-        // add controls
         this.controls = new FirstPersonControls(this.camera, this.renderer.domElement);
         this.controls.enabled = false;
         window.addEventListener('keyup', (e) => {
@@ -42,11 +38,8 @@ class View {
         this.controls.movementSpeed = 100;
         this.controls.update(controlsClock.getDelta());
        
-
         const geometry = new THREE.PlaneBufferGeometry(5000, 5000, 100, 100);
        
-
-        // add ground
         const texture = new THREE.TextureLoader().load('./src/assets/grass_path.jpg');
         texture.wrapS = THREE.RepeatWrapping;
         texture.wrapT = THREE.RepeatWrapping;
@@ -62,7 +55,6 @@ class View {
         this.ground.castShadow = true;
         this.ground.updateMatrixWorld(true);
 
-         //  add hills
         const peak = 90;
         const slope = 300;
         const vertices = this.ground.geometry.attributes.position.array;
@@ -88,9 +80,6 @@ class View {
         // add fog
         const fogColor = new THREE.Color(0xF2B295);
         this.scene.fog = new THREE.Fog(fogColor, 50, 1000);
-
-        // const axes = new THREE.AxesHelper(100);
-        // this.scene.add(axes);
 
         const container = document.querySelector('.canvas-container');
         container.appendChild(this.renderer.domElement);

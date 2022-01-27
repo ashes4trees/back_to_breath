@@ -12,10 +12,12 @@
     <link rel="reset" href="./src/styles/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Roboto:wght@400;700&display=swap"
     rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/favicon-16x16.png">
     <script src='https://joeiddon.github.io/perlin/perlin.js'></script>
     <script src="https://kit.fontawesome.com/0134b9df1d.js" crossorigin="anonymous"></script>
     <script src="./dist/main.js"></script>
-    <script src="./node_modules/three/src/Three.js"></script>
+    <script src="./node_modules/three/src/Three.js" type='module'></script>
     <title>Back to Breath</title>
 </head>
 <body>
@@ -23,7 +25,7 @@
        
         <h1>Back to Breath</h1>
         
-        <audio id="audio" src="" loop></audio>
+        <audio id="audio" src="" loop="true"></audio>
         
         <form id="form" >
             <label for="music">choose your music:</label>
@@ -63,33 +65,59 @@
             <input id="begin" type="submit" value="begin">
         </div>
 
+        <div id="modal">
+            <p>move: wasd</p>
+            <br>
+            <p>look: mouse</p>
+            <br>
+            <p>lock/unlock controls: space</p>
+            <br>
+            <input id="close" type="submit" value="close">
+        </div>
+
         <div id='load'>
             <p>breathe...</p>
         </div>
 
-
+        <div id='goodbye'>
+            <p>Take a deep breath.</p>
+            <p>Inhale peace.</p>
+            <p>Exhale happiness.</p>
+            <p>-A.D. Posey</p>
+        </div>
     </div>
-    
-    
-        
+
         <div class="canvas-container">
             <canvas id="canvas1" ></canvas>
         </div>
 
+        <p id="prompt">  in...</p>
         <div class="canvas2-container">
             <canvas id="canvas2"></canvas>
         </div>
     
         <div class="music-control">
-                <!-- <li class="button"><i class="fas fa-music"></i></li> -->
                 <i id="play-pause" class="fas fa-pause" ></i>
-                <!-- <li id="play" class="button"><i id=class="fas fa-play"></i></li> -->
-                <!-- <li class="button"><i class="fas fa-volume-up"></i></li> -->
         </div>
 
+        <div class='misc'>
+            <p id='info-btn'>i</p>
+        </div>
+        
+
         <div class="links">
-           <a href="https://github.com/ashes4trees" target="_blank"><img src="./src/assets/GitHub-Mark-64px.png" alt="connect on github" id="git"></a> 
-            <!-- <a href="https://www.linkedin.com/in/steph-soni/" target="_blank"><img src='src/assets/linkedin_black_logo_icon_147114.png' alt="connect on linkedin" id="linkedin"></a> -->
+           <a href="https://github.com/ashes4trees" 
+                target="_blank" 
+                alt="connect on github" 
+                id="git">
+            <img src="./src/assets/GitHub-Mark-64px.png" id="git-logo">
+            </a> 
+            <a href="https://www.linkedin.com/in/steph-soni/" 
+                target="_blank" 
+                id="linkedin" 
+                alt="connect on linkedin">
+            <img src='src/assets/linkedin_black_logo_icon_147114.png' id="linkedin-logo">
+            </a> 
         </div>
 
 </body>

@@ -17,8 +17,23 @@ class Music {
         this.musicButton();
     }
 
+    fade() {
+        if (this.audio.muted) {
+            this.audio.pause();
+        } else {
+            const turnDown = this.audio.volume / parseFloat(50);
+            setInterval(() => {
+                if (this.audio.volume - turnDown >= 0) {
+                    this.audio.volume -= turnDown;
+                } else {
+                    this.audio.pause();
+                }
+            }, 200)
+        }     
+    }
+
     playToggle() {
-       return this.audio.paused ? this.audio.play() : this.audio.pause();
+       return this.audio.muted ? this.audio.muted = false : this.audio.muted = true;
     }
 
     musicButton() {

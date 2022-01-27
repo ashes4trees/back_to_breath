@@ -5,7 +5,6 @@ class Apple {
     constructor(scene, ground) {
         this.scene = scene;
         this.ground = ground;
-        // this.num = num;
         const loader = new GLTFLoader();
 
         loader.load(`./src/assets/misc/apple.glb`, function (gltf) {

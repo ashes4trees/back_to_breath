@@ -5,7 +5,6 @@ class Rock {
     constructor(scene, ground) {
         this.scene = scene;
         this.ground = ground;
-        // this.num = num;
         const loader = new GLTFLoader();
         const randomPosX = (Math.random() * 5000) - 2500;
         const randomPosZ = (Math.random() * 5000) - 2500;

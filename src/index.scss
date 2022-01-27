@@ -1,17 +1,39 @@
 body {
   font-family: "Comfortaa";
-  background-image: url("../src/assets/green_cup.png"); 
-  // Breath/src/assets/green_cup.png
+  background-image: url("../src/assets/green_cup.png");
   margin: 0;
+  overflow-y: hidden;
 }
 
 .fade-in {
   animation: fadeIn ease 10s;
 }
 
+.fade-out {
+  visibility: hidden;
+  animation: fadeOut ease 10s;
+}
+
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 h1 {
@@ -25,38 +47,23 @@ h1 {
   align-items: center;
   justify-content: space-evenly;
   width: 30%;
-  // border: 1px solid black;
-  // box-shadow: 0px 8px 15px #4e4d4d;
-
 }
 
-#instructions {
+#instructions, #modal, #form, #load, #goodbye {
   display: none;
   flex-direction: column;
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10%;
+  position: absolute;
+  top: 30vh;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0px 8px 15px #4e4d4d;
   text-align: center;
 }
 
 #form {
   display: flex;
-  flex-direction: column;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10%;
-}
-
-#load {
-  display: none;
-  flex-direction: column;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 60%;
-  text-align: center;
 }
 
 #form select {
@@ -64,18 +71,29 @@ h1 {
   border-radius: 4px;
   background: none;
   font-weight: bold;
+  outline: none;
 }
 
 .music-control {
-  /* display: 'none'; */
   position: absolute;
-  top: 3%;
+  top: 5%;
   left: 3%;
 }
 
 .links {
   position: absolute;
-  bottom: 30%;
+  height: 200px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  top: 5%;
+  right: 3%;
+}
+
+.misc {
+  position: absolute;
+  bottom: 22%;
   left: 3%;
 }
 
@@ -88,18 +106,22 @@ h1 {
   left: 3%;
   border: 2px solid #18633b;
   border-radius: 20px;
-  background-color: rgb(172,175,156, 0.5);
+  background-color: rgba(172, 175, 156, 0.5);
 }
 
-/* .music-controls ul {
-  list-style: none;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-} */
+#prompt {
+  width: fit-content;
+  font-size: 20px;
+  display: none;
+  color: black;
+  font-weight: bolder;
+  position: absolute;
+  top: 35%;
+  left: 4%;
+  text-align: left;
+}
 
-#play-pause, #git, #linkedin {
+#play-pause, #git, #linkedin, #info-btn {
   display: none;
   justify-content: center;
   align-items: center;
@@ -111,22 +133,40 @@ h1 {
   cursor: pointer;
 }
 
-#submit, #begin {
+#git, #linkedin {
+  display: flex;
+}
+
+#git-logo, #linkedin-logo {
+  width: 25px;
+  height: auto;
+}
+
+#info-btn {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#submit, #begin, #close {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #18633b;
   border: none;
   border-radius: 4px;
-  box-shadow: 0px 8px 15px #4e4d4d;
+  box-shadow: 0px 3px 8px #4e4d4d;
   cursor: pointer;
   font-weight: bold;
 }
 
-#play-pause:hover, #submit:hover, #git:hover {
+#play-pause:hover, #submit:hover, #info-btn:hover, 
+#linkedin:hover, #git:hover, 
+#begin:hover, #close:hover {
   filter: brightness(85%);
 }
 
-#play-pause:active, #submit:active, #git:active {
-  transform: scale(0.90);
+#play-pause:active, #submit:active, 
+#linkedin:active, #git:active, 
+#info-btn:active, #begin:active, #close:active {
+  transform: scale(0.9);
 }
