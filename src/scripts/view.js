@@ -89,7 +89,7 @@ class View {
         const z = (Math.random() * 200) - 100;
 
         const shape = new THREE.CircleBufferGeometry(5, 2, 0, 360);
-        const tex = new THREE.TextureLoader().load('./src/assets/leaf.jpg');
+        const tex = new THREE.TextureLoader().load('../src/assets/leaf.jpg');
         const mats = new THREE.MeshStandardMaterial({ map: tex });
         this.leaf = new THREE.Mesh(shape, mats);
         this.leaf.name = 'leaf';
