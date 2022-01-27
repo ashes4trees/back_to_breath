@@ -42,7 +42,7 @@ class Music {
         
         button.addEventListener('click', (e) => {
             this.playToggle();
-            if (audio.paused) {
+            if (audio.muted) {
                 button.className = "fas fa-play";
             } else {
                 button.className = "fas fa-pause";
