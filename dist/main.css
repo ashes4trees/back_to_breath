@@ -122,7 +122,8 @@ h1 {
   text-align: left;
 }
 
-#play-pause, #git, #linkedin, #info-btn {
+#play-pause, #git, #linkedin, #info-btn, #portfolio {
+  text-decoration: none;
   display: none;
   justify-content: center;
   align-items: center;
@@ -134,13 +135,19 @@ h1 {
   cursor: pointer;
 }
 
-#git, #linkedin {
+#git, #linkedin, #portfolio {
   display: flex;
 }
 
 #git-logo, #linkedin-logo {
   width: 25px;
   height: auto;
+}
+
+#portfolio-icon {
+  color: black;
+  font-size: 20px;
+  text-align: center;
 }
 
 #info-btn {
@@ -162,12 +169,12 @@ h1 {
 
 #play-pause:hover, #submit:hover, #info-btn:hover,
 #linkedin:hover, #git:hover,
-#begin:hover, #close:hover {
+#begin:hover, #close:hover, #portfolio:hover {
   filter: brightness(85%);
 }
 
 #play-pause:active, #submit:active,
 #linkedin:active, #git:active,
-#info-btn:active, #begin:active, #close:active {
+#info-btn:active, #begin:active, #close:active, #portfolio:active {
   transform: scale(0.9);
 }
