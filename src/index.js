@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const info = document.querySelector('#info-btn');
     const close = document.querySelector('#close');
     const canvas2 = document.querySelector('#canvas2');
+    const restart = document.querySelector('#restart');
     canvas2.width = 50;
     canvas2.height = 300;
     const ctx = canvas2.getContext('2d');
@@ -86,6 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal = document.querySelector('#modal');
         modal.style.display === 'none' ? modal.style.display = 'flex' :
             modal.style.display = 'none';
+    });
+
+    restart.addEventListener('click', e => {
+        location.reload();
     });
 
 

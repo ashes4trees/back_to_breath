@@ -61,6 +61,7 @@ h1 {
   padding: 20px;
   box-shadow: 0px 8px 15px #4e4d4d;
   text-align: center;
+  z-index: 10;
 }
 
 #form {
@@ -155,7 +156,7 @@ h1 {
   font-weight: bold;
 }
 
-#submit, #begin, #close {
+#submit, #begin, #close, #restart {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,12 +170,12 @@ h1 {
 
 #play-pause:hover, #submit:hover, #info-btn:hover,
 #linkedin:hover, #git:hover,
-#begin:hover, #close:hover, #portfolio:hover {
+#begin:hover, #close:hover, #portfolio:hover, #restart:hover {
   filter: brightness(85%);
 }
 
 #play-pause:active, #submit:active,
 #linkedin:active, #git:active,
-#info-btn:active, #begin:active, #close:active, #portfolio:active {
+#info-btn:active, #begin:active, #close:active, #portfolio:active, #restart:active {
   transform: scale(0.9);
 }
